@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Django Calculator</title>
+    <link rel="stylesheet" type='text/css' media="screen" href="{% static 'styles/main.css' %}">
+  </head>
+
+  <body>
+    <section class="calculator">
+      <h1>Django Calculator App</h1>
+
+      <form action="kalku/" method="POST">
+        {% csrf_token %}
+        
+        <label for="angka1">tinggi(meter)</label>
+        <input type="number" placeholder="First Number" name="angka1" />
+
+        <label for="angka2">berat badan(kg)</label>
+        <input type="number" placeholder="Second Number" name="angka2" />
+
+        <input type="submit" value="Calculate" id="calc_btn" class="btn" />
+
+        
+      </form>
+    </section>
+
+    <footer>
+      
+    </footer>
+  </body>
+</html>
